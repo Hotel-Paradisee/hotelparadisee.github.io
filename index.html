@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Paradise</title>
+    <link rel="stylesheet" href="css/styleindex.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <script src="consultarhabitaciones.js"></script>
+    <header class="header">
+        <div class="menu container">
+            <a href="#" class="logo">Hotel Paradise</a>
+            <input type="checkbox" id="menu" title="Toggle the menu" aria-label="Menu toggle" />
+            <label for="menu" class="menu-label">☰</label>
+            <a href="#"><img src="../img/LOGO.png" class="menu-icono" alt="Logo del hotel"></a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Precios</a></li>
+                    <li><a href="#">Contactos</a></li>
+                    <li><a href="#">Galería</a></li>
+                </ul>
+            </nav>
+        </div> 
+
+        <div class="header-content container">
+            <h1>Hotel Paradise</h1>
+            <p>"Descubre el lujo y la comodidad en cada detalle. Reserva tu estancia con nosotros y disfruta de habitaciones elegantes, servicios exclusivos y una experiencia inolvidable. ¡Tu descanso comienza aquí!"</p>
+        
+            <div class="reserva-panel">
+                <h2 class="titulo-panel">Consulta disponibilidad</h2>
+                <form id="formBusqueda" class="reserva-form-horizontal" action="../html/catalogo.html" method="GET">
+                    <div class="campo">
+                        <input type="date" id="entrada" name="entrada" placeholder="Entrada" required>
+                    </div>
+                    <div class="campo">
+                        <input type="date" id="salida" name="salida" placeholder="Salida" required>
+                    </div>
+                    <div class="campo input-icon">
+                        <i class="fas fa-users" aria-hidden="true"></i>
+                        <input type="number" id="personas" name="personas" placeholder="Personas" min="1" required>
+                    </div>
+                    <div class="campo input-icon">
+                        <i class="fas fa-child" aria-hidden="true"></i>
+                        <input type="number" id="ninos" name="ninos" placeholder="Niños" min="0">
+                    </div>
+                    <div class="campo">
+                        <button type="submit">Consultar</button>
+                    </div>
+                </form>
+            </div>
+            
+        </div> <!-- Cierre de header-content container -->
+    </header> <!-- Cierre de header -->
+
+    <main>
+
+        <section class="hotel">
+            <div class="hotel-content container">
+                <h2>Diferentes Tipos de Habitaciones</h2>
+                <p>En nuestro hotel, ofrecemos una variedad de habitaciones diseñadas para adaptarse a cada huésped. Desde acogedoras habitaciones estándar hasta lujosas suites panorámicas y habitaciones familiares amplias.</p>
+                <div class="hotel-group">
+                    <div class="hotel-1">
+                        <img src="img/Individual.png" alt="Habitación Individual">
+                        <h3>Individuales</h3>
+                        <p>Comodidad y privacidad, ideales para viajeros solitarios o estancias de negocios. Con cama individual, escritorio y todas las comodidades.</p>
+                    </div>
+                    <div class="hotel-1">
+                        <img src="img/Familiares.png" alt="Habitación Familiar">
+                        <h3>Familiares</h3>
+                        <p>Espacios amplios, múltiples camas, áreas de convivencia y comodidades especiales para adultos y niños.</p>
+                    </div>
+                    <div class="hotel-1">
+                        <img src="img/Suites.png" alt="Suite">
+                        <h3>Suites</h3>
+                        <p>Máximo lujo con amplios espacios, sala de estar, jacuzzi, vistas panorámicas y servicios premium.</p>
+                    </div>
+                </div>
+                <a href="html/habitaciones.html" class="btn-1">Más información</a>
+            </div>
+        </section>
+
+        <section class="services">
+            <div class="services-content container">
+                <h2>Servicios del Hotel</h2>
+                <div class="services-group">
+                    <div class="services-1">
+                        <img src="img/5 Estrellas.png" alt="Hospedaje de lujo">
+                        <h3>Hospedaje de Lujo</h3>
+                    </div>
+                    <div class="services-1">
+                        <img src="img/24hrs.png" alt="Servicio las 24 horas">
+                        <h3>Servicio 24 Horas</h3>
+                    </div>
+                    <div class="services-1">
+                        <img src="img/Restaurante.png" alt="Restaurante Gourmet">
+                        <h3>Restaurante Gourmet</h3>
+                    </div>
+                </div>
+                <p>Cada detalle ha sido cuidadosamente pensado para ofrecerte una experiencia única, llena de confort, exclusividad y atención personalizada. Nos enfocamos en brindarte lo mejor en calidad, elegancia y bienestar, asegurando que cada momento de tu estancia sea simplemente inolvidable.</p>
+                <a href="html/servicios.html" class="btn-1">Más información</a>
+            </div>
+        </section>
+
+        <section class="general">
+            <div class="general-1">
+                <h2>Lujo y Confort en Cada Espacio</h2>
+                <p>Nuestras habitaciones ofrecen comodidad, decoración elegante, camas de alta calidad y vistas impresionantes. Disfruta de una estancia única y relajante.</p>
+                <a href="#" class="btn-1">Más información</a>
+            </div>
+            <div class="general-2"></div>
+        </section>
+
+        <section class="general">
+            <div class="general-3"></div>
+            <div class="general-1">
+                <h2>Terraza y Piscina Exclusiva</h2>
+                <p>Relájate en nuestra terraza con piscina climatizada, disfrutando del sol, bebidas refrescantes y vistas espectaculares de la ciudad.</p>
+                <a href="#" class="btn-1">Más información</a>
+            </div>
+        </section>
+
+        <section class="blog container">
+            <h2>Experiencias en el Hotel</h2>
+            <p>Las Mejores Experiencias</p>
+            <div class="blog-content">
+                <div class="blog-1">
+                    <img src="img/lujoydetalle.png" alt="Lujo en cada detalle">
+                    <h3>Lujo en Cada Detalle</h3>
+                    <p>Disfruta de servicios y comodidades exclusivas para una estancia inigualable.</p>
+                </div>
+                <div class="blog-1">
+                    <img src="img/Gurmet.png" alt="Gastronomía gourmet">
+                    <h3>Sabores Únicos</h3>
+                    <p>Descubre nuestro menú de autor con platillos exquisitos para los paladares más exigentes.</p>
+                </div>
+                <div class="blog-1">
+                    <img src="img/relajate.png" alt="Relájate y disfruta">
+                    <h3>Relájate y Disfruta</h3>
+                    <p>Un oasis de tranquilidad con vistas espectaculares y ambiente cómodo.</p>
+                </div>
+            </div>
+            <a href="#" class="btn-1">Más información</a>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content container">
+            <div class="link">
+                <h3>Hotel Paradise</h3>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Precios</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="link">
+                <h3>Información</h3>
+                <ul>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Términos de uso</a></li>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                    <li><a href="#">Aviso legal</a></li>
+                </ul>
+            </div>
+            <div class="link">
+                <h3>Redes Sociales</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
