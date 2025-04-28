@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Habitaciones</title>
+  <link rel="stylesheet" href="../css/stylehabitacion.css">
+</head>
+<body>
+  <h1>Habitaciones Disponibles</h1>
+  <div id="habitaciones-container"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const entrada = params.get('entrada');
+      const salida = params.get('salida');
+      const personas = params.get('personas');
+      const ninos = params.get('ninos');
+
+      fetch(`/habitaciones?entrada=${entrada}&salida=${salida}&personas=${personas}&ninos=${ninos}`)
+        .then(res => res.json())
+        .then(data => {
+          const container = document.getElementById('habitaciones-container');
+          if (data.length === 0) {
+            container.innerHTML = '<p>No hay habitaciones disponibles.</p>';
+            return;
+          }
+
+          data.forEach(habitacion => {
+            const div = document.createElement('div');
+            div.classList.add('habitacion');
+            div.innerHTML = `
+              <img src="../img/${habitacion.imagen}" alt="Habitación">
+              <h2>${habitacion.nombre}</h2>
+              <p>${habitacion.descripcion}</p>
+              <p>Capacidad: ${habitacion.capacidad}</p>
+              <p>Precio: $${habitacion.precio}</p>
+              <button>Reservar</button>
+            `;
+            container.appendChild(div);
+          });
+        })
+        .catch(err => {
+          console.error('Error al cargar habitaciones:', err);
+        });
+    });
+  </script>
+</body>
+</html>
